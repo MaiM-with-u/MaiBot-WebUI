@@ -1,8 +1,9 @@
 
 
-# ProjectName
 
-ProjectName and Description
+# MaiBot WebUI
+
+一个适用于麦麦MaiBot的可视化管理器
 
 <!-- PROJECT SHIELDS -->
 
@@ -11,28 +12,27 @@ ProjectName and Description
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/DrSmoothl/MaiBot-WebUI/">
+    <img src="images/logo.png" alt="Logo" width="300">
   </a>
 
-  <h3 align="center">"完美的"README模板</h3>
+  <h3 align="center">MaiBot WebUI</h3>
   <p align="center">
-    一个"完美的"README模板去快速开始你的项目！
+    一个适用于麦麦MaiBot的可视化管理器
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/DrSmoothl/MaiBot-WebUI"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/DrSmoothl/MaiBot-WebUI">查看Demo</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
+    <a href="https://github.com/DrSmoothl/MaiBot-WebUI/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/DrSmoothl/MaiBot-WebUI/issues">提出新特性</a>
   </p>
 
 </p>
@@ -57,29 +57,38 @@ ProjectName and Description
 
 ### 上手指南
 
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
-
-
-
 ###### 开发前的配置要求
 
-1. xxxxx x.x.x
-2. xxxxx x.x.x
+1. Nodejs 20.0+
+2. Python 3.12+
 
 ###### **安装步骤**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
 
 ```sh
-git clone https://github.com/shaojintian/Best_README_template.git
+git clone https://github.com/DrSmoothl/MaiBot-WebUI.git
 ```
 
+2. 
+```sh
+# 安装pnpm
+npm install pnpm
+
+# 安装依赖
+pnpm i
+
+# 运行开发服务器
+pnpm run dev
+
+# 运行构建
+pnpm run build
+```
+<!-- 
 ### 文件目录说明
-eg:
 
 ```
-filetree 
+/
 ├── ARCHITECTURE.md
 ├── LICENSE.txt
 ├── README.md
@@ -96,15 +105,15 @@ filetree
 ├── useless.md
 └── /util/
 
-```
+``` -->
 
 
 
 
 
-### 开发的架构 
+<!-- ### 开发的架构 
 
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+请阅读[ARCHITECTURE.md](https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。 -->
 
 ### 部署
 
@@ -112,13 +121,13 @@ filetree
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+- [Vue.js](https://cn.vuejs.org/)
+- [Element Plus](https://element-plus.org/zh-CN/)
+- [Vite](https://cn.vitejs.dev/)
 
-### 贡献者
+<!-- ### 贡献者
 
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
+请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。 -->
 
 #### 如何参与开源项目
 
@@ -139,15 +148,15 @@ filetree
 
 ### 作者
 
-xxx@xxxx
+motricseven@gmail.com / 1787882683@qq.com
 
-知乎:xxxx  &ensp; qq:xxxxxx    
+qq:1787882683
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
+该项目签署了GPL v3 授权许可，详情请参阅 [LICENSE](https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/LICENSE)
 
 ### 鸣谢
 
@@ -156,21 +165,19 @@ xxx@xxxx
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
+- [art-design-pro](https://github.com/Daymychen/art-design-pro?tab=readme-ov-file)
 
 <!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
+[your-project-path]:DrSmoothl/MaiBot-WebUI
+[contributors-shield]: https://img.shields.io/github/contributors/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
+[contributors-url]: https://github.com/DrSmoothl/MaiBot-WebUI/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
+[forks-url]: https://github.com/DrSmoothl/MaiBot-WebUI/network/members
+[stars-shield]: https://img.shields.io/github/stars/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
+[stars-url]: https://github.com/DrSmoothl/MaiBot-WebUI/stargazers
+[issues-shield]: https://img.shields.io/github/issues/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/DrSmoothl/MaiBot-WebUI.svg
+[license-shield]: https://img.shields.io/github/license/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
+[license-url]: https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
 
