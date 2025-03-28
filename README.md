@@ -1,9 +1,8 @@
-
-
-
 # MaiBot WebUI
 
 一个适用于麦麦MaiBot的可视化管理器
+
+[English](README.en.md) | 简体中文
 
 <!-- PROJECT SHIELDS -->
 
@@ -17,7 +16,7 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/DrSmoothl/MaiBot-WebUI/">
+  <a href="https://github.com/MaiM-with-u/MaiBot-WebUI/">
     <img src="images/logo.png" alt="Logo" width="300">
   </a>
 
@@ -25,14 +24,14 @@
   <p align="center">
     一个适用于麦麦MaiBot的可视化管理器
     <br />
-    <a href="https://github.com/DrSmoothl/MaiBot-WebUI"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/MaiM-with-u/MaiBot-WebUI"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/DrSmoothl/MaiBot-WebUI">查看Demo</a>
+    <a href="https://github.com/MaiM-with-u/MaiBot-WebUI">查看Demo</a>
     ·
-    <a href="https://github.com/DrSmoothl/MaiBot-WebUI/issues">报告Bug</a>
+    <a href="https://github.com/MaiM-with-u/MaiBot-WebUI/issues">报告Bug</a>
     ·
-    <a href="https://github.com/DrSmoothl/MaiBot-WebUI/issues">提出新特性</a>
+    <a href="https://github.com/MaiM-with-u/MaiBot-WebUI/issues">提出新特性</a>
   </p>
 
 </p>
@@ -67,7 +66,7 @@
 1. Clone the repo
 
 ```sh
-git clone https://github.com/DrSmoothl/MaiBot-WebUI.git
+git clone https://github.com/MaiM-with-u/MaiBot-WebUI.git
 ```
 
 2. 
@@ -113,7 +112,7 @@ pnpm run build
 
 <!-- ### 开发的架构 
 
-请阅读[ARCHITECTURE.md](https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。 -->
+请阅读[ARCHITECTURE.md](https://github.com/MaiM-with-u/MaiBot-WebUI/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。 -->
 
 ### 部署
 
@@ -133,12 +132,11 @@ pnpm run build
 
 贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
 
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的更改 (`git commit -m '添加了一些很棒的特性'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启一个 Pull Request
 
 
 
@@ -148,6 +146,8 @@ pnpm run build
 
 ### 作者
 
+墨梓柒MotricSeven
+
 motricseven@gmail.com / 1787882683@qq.com
 
 qq:1787882683
@@ -156,7 +156,7 @@ qq:1787882683
 
 ### 版权说明
 
-该项目签署了GPL v3 授权许可，详情请参阅 [LICENSE](https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/LICENSE)
+该项目签署了GPL v3 授权许可，详情请参阅 [LICENSE](https://github.com/MaiM-with-u/MaiBot-WebUI/blob/master/LICENSE)
 
 ### 鸣谢
 
@@ -168,16 +168,16 @@ qq:1787882683
 - [art-design-pro](https://github.com/Daymychen/art-design-pro?tab=readme-ov-file)
 
 <!-- links -->
-[your-project-path]:DrSmoothl/MaiBot-WebUI
-[contributors-shield]: https://img.shields.io/github/contributors/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
-[contributors-url]: https://github.com/DrSmoothl/MaiBot-WebUI/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
-[forks-url]: https://github.com/DrSmoothl/MaiBot-WebUI/network/members
-[stars-shield]: https://img.shields.io/github/stars/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
-[stars-url]: https://github.com/DrSmoothl/MaiBot-WebUI/stargazers
-[issues-shield]: https://img.shields.io/github/issues/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/DrSmoothl/MaiBot-WebUI.svg
-[license-shield]: https://img.shields.io/github/license/DrSmoothl/MaiBot-WebUI.svg?style=flat-square
-[license-url]: https://github.com/DrSmoothl/MaiBot-WebUI/blob/master/LICENSE.txt
+[your-project-path]:MaiM-with-u/MaiBot-WebUI
+[contributors-shield]: https://img.shields.io/github/contributors/MaiM-with-u/MaiBot-WebUI.svg?style=flat-square
+[contributors-url]: https://github.com/MaiM-with-u/MaiBot-WebUI/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MaiM-with-u/MaiBot-WebUI.svg?style=flat-square
+[forks-url]: https://github.com/MaiM-with-u/MaiBot-WebUI/network/members
+[stars-shield]: https://img.shields.io/github/stars/MaiM-with-u/MaiBot-WebUI.svg?style=flat-square
+[stars-url]: https://github.com/MaiM-with-u/MaiBot-WebUI/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MaiM-with-u/MaiBot-WebUI.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/MaiM-with-u/MaiBot-WebUI.svg
+[license-shield]: https://img.shields.io/github/license/MaiM-with-u/MaiBot-WebUI.svg?style=flat-square
+[license-url]: https://github.com/MaiM-with-u/MaiBot-WebUI/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 

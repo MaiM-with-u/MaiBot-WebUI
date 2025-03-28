@@ -1,0 +1,110 @@
+@use '@styles/variables.scss' as *;
+
+.worktab {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px 10px;
+  user-select: none;
+  background: var(--art-bg-color);
+
+  .scroll-view {
+    width: 100%;
+    overflow: hidden;
+
+    .tabs {
+      float: left;
+      white-space: nowrap;
+      background: transparent !important;
+
+      li {
+        display: inline-block;
+        height: 32px;
+        padding: 0 8px 0 12px;
+        margin-right: 6px;
+        font-size: 13px;
+        line-height: 32px;
+        color: var(--art-text-gray-600);
+        text-align: center;
+        cursor: pointer;
+        background: var(--art-main-bg-color);
+        border: 1px solid transparent;
+        border-radius: calc(var(--custom-radius) / 2.5 + 2px) !important;
+        transition: color 0.1s;
+
+        &:hover {
+          color: var(--main-color) !important;
+          transition: color 0.2s;
+        }
+
+        i {
+          position: relative;
+          top: 2px;
+          padding: 2px;
+          margin-left: 5px;
+          border-radius: 50%;
+          transition: all 0.2s;
+
+          &:hover {
+            background: rgb(238 238 238 / 100%);
+          }
+        }
+      }
+
+      .activ-tab {
+        color: var(--main-color) !important;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+
+    .btn {
+      position: relative;
+      top: 0;
+      box-sizing: border-box;
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+      line-height: 32px;
+      text-align: center;
+      cursor: pointer;
+      background: var(--art-main-bg-color);
+      border-radius: 3px;
+
+      &:hover ul {
+        display: inline;
+      }
+
+      &.history {
+        color: #666;
+      }
+    }
+  }
+}
+
+.dark {
+  .tabs {
+    li {
+      i {
+        &:hover {
+          background: rgb(238 238 238 / 10%) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $device-ipad) {
+  .worktab {
+    padding: 6px 10px;
+  }
+}
+
+@media only screen and (max-width: $device-phone) {
+  .worktab {
+    padding: 0 15px;
+  }
+}
