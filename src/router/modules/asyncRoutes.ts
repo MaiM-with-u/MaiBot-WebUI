@@ -93,6 +93,39 @@ export const asyncRoutes: MenuListType[] = [
     ]
 
   },
+  {
+    id: 11,
+    path: '/data',
+    name: 'Data',
+    component: RoutesAlias.Home,
+    meta: {
+      title: '数据管理',
+      icon: '&#xe721;',
+      keepAlive: false
+    },
+    children: [
+      {
+        id: 111,
+        path: 'emoji',
+        name: 'EmojiManage',
+        component: '/data/EmojiManage',
+        meta: {
+          title: '表情包管理',
+          keepAlive: true
+        }
+      },
+      {
+        id: 112,
+        path: 'relationship',
+        name: 'RelationshipManage',
+        component: '/data/RelationshipManage',
+        meta: {
+          title: '关系管理',
+          keepAlive: true
+        }
+      }
+    ]
+  },
   // {
   //   id: 5,
   //   path: '/widgets',

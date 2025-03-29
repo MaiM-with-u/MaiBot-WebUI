@@ -150,19 +150,10 @@
           <div class="model-stats-content">
             <el-table :data="modelStats" style="width: 100%" :stripe="true">
               <el-table-column prop="name" label="模型名称" min-width="200" />
-              <el-table-column prop="inputTokens" label="输入Token" width="150">
+              <el-table-column prop="totalCalls" label="调用次数" width="150">
                 <template #default="scope">
                   <CountTo
-                    :endVal="scope.row.inputTokens"
-                    :duration="1000"
-                    separator=","
-                  ></CountTo>
-                </template>
-              </el-table-column>
-              <el-table-column prop="outputTokens" label="输出Token" width="150">
-                <template #default="scope">
-                  <CountTo
-                    :endVal="scope.row.outputTokens"
+                    :endVal="scope.row.totalCalls"
                     :duration="1000"
                     separator=","
                   ></CountTo>
@@ -175,6 +166,11 @@
                     :duration="1000"
                     separator=","
                   ></CountTo>
+                </template>
+              </el-table-column>
+              <el-table-column prop="totalCost" label="总花费" width="150">
+                <template #default="scope">
+                  {{ scope.row.totalCost.toFixed(4) }}￥
                 </template>
               </el-table-column>
               <el-table-column label="使用占比" width="200">
@@ -296,10 +292,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { CountTo } from 'vue3-count-to'
 import * as echarts from 'echarts'
+import { llmStatsService } from '@/api/model/llmStats'
   import { useSettingStore } from '@/store/modules/setting'
   import { useCommon } from '@/composables/useCommon'
 
@@ -351,16 +348,21 @@ const recentMessages = ref([
 
 // LLM统计数据
 const llmStats = ref({
-  totalRequests: 62080,
-  totalTokens: 23596214,
-  totalCost: 11.1945,
-  onlineTime: 270,
-  modelCount: 9,
-  activeModels: 5
+  totalRequests: 0,
+  totalTokens: 0,
+  totalCost: 0,
+  onlineTime: 0,
+  modelCount: 0,
+  activeModels: 0
 })
 
 // 模型使用统计
-const modelStats = ref([
+const modelStats = ref<Array<{
+  name: string,
+  inputTokens: number,
+  outputTokens: number,
+  totalTokens: number
+}>>([
   {
     name: 'BAAI/bge-m3',
     inputTokens: 2354,

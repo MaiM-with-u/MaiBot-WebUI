@@ -255,7 +255,12 @@ export const configService = {
         } else if (typeof value === 'object' && value !== null) {
           const processed: any = {}
           for (const [k, v] of Object.entries(value)) {
-            processed[k] = processValue(v)
+            // 特别处理记忆构建分布数据，确保为float类型
+            if (k === 'memoryBuildDistribution') {
+              processed[k] = typeof v === 'string' ? parseFloat(v) : v
+            } else {
+              processed[k] = processValue(v)
+            }
           }
           return processed
         } else if (typeof value === 'string' && !isNaN(Number(value))) {

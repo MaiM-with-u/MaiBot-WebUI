@@ -209,10 +209,12 @@
 
   // 标签页操作方法
   const clickTab = (item: WorkTabType) => {
-    router.push({
-      path: item.path,
-      query: item.query as LocationQueryRaw
-    })
+    if (item.path !== activeTab.value) {
+      router.push({
+        path: item.path,
+        query: item.query as LocationQueryRaw
+      })
+    }
   }
 
   // 关闭标签页的不同方式
