@@ -14,6 +14,7 @@ import { WEB_LINKS } from '@/utils/links'
  * 可以是 i18n 的 key，也可以是字符串，比如：'用户列表'
  */
 export const asyncRoutes: MenuListType[] = [
+  
   {
     id: 1,
     name: 'Dashboard',
