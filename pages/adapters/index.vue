@@ -1,6 +1,57 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+interface Adapter {
+  id: string
+  name: string
+  description: string
+  version: string
+  author: string
+  icon: string
+  tags: string[]
+  installed: boolean
+  enabled: boolean
+}
+
+// 示例数据
+const adapters = ref<Adapter[]>([
+  {
+    id: 'qq',
+    name: 'QQ适配器',
+    description: '支持QQ平台的消息收发、群管理等功能',
+    version: '1.0.0',
+    author: 'MaiBot Team',
+    icon: 'i-heroicons-chat-bubble-left',
+    tags: ['即时通讯', '群聊'],
+    installed: true,
+    enabled: true,
+  },
+])
+
+function toggleAdapter(_adapter: Adapter) {
+  // TODO: Implement adapter toggle logic
+  // console.log(`Toggling adapter ${_adapter.name}: ${_adapter.enabled}`)
+}
+
+function installAdapter(_adapter: Adapter) {
+  // TODO: Implement adapter installation logic
+  // console.log(`Installing adapter ${_adapter.name}`)
+  _adapter.installed = true
+}
+
+function uninstallAdapter(adapter: Adapter) {
+  // TODO: Implement adapter uninstallation logic
+  // console.log(`Uninstalling adapter ${adapter.name}`)
+  adapter.installed = false
+  adapter.enabled = false
+}
+</script>
+
 <template>
   <div class="p-6">
-    <h1 class="text-2xl font-bold mb-6">适配器广场</h1>
+    <h1 class="text-2xl font-bold mb-6">
+      适配器广场
+    </h1>
 
     <!-- 适配器列表 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -9,7 +60,9 @@
           <div class="flex items-center justify-between">
             <div class="flex items-center">
               <UIcon :name="adapter.icon" class="mr-2" />
-              <h3 class="text-lg font-semibold">{{ adapter.name }}</h3>
+              <h3 class="text-lg font-semibold">
+                {{ adapter.name }}
+              </h3>
             </div>
             <UBadge
               :color="adapter.installed ? 'green' : 'gray'"
@@ -69,92 +122,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-interface Adapter {
-  id: string
-  name: string
-  description: string
-  version: string
-  author: string
-  icon: string
-  tags: string[]
-  installed: boolean
-  enabled: boolean
-}
-
-// 示例数据
-const adapters = ref<Adapter[]>([
-  {
-    id: 'qq',
-    name: 'QQ适配器',
-    description: '支持QQ平台的消息收发、群管理等功能',
-    version: '1.0.0',
-    author: 'MaiBot Team',
-    icon: 'i-heroicons-chat-bubble-left',
-    tags: ['即时通讯', '群聊'],
-    installed: true,
-    enabled: true
-  },
-  {
-    id: 'wechat',
-    name: '微信适配器',
-    description: '支持微信个人号/公众号的消息处理',
-    version: '1.0.0',
-    author: 'MaiBot Team',
-    icon: 'i-heroicons-chat-bubble-left-right',
-    tags: ['即时通讯', '公众号'],
-    installed: false,
-    enabled: false
-  },
-  {
-    id: 'discord',
-    name: 'Discord适配器',
-    description: '支持Discord服务器的机器人功能',
-    version: '1.0.0',
-    author: 'MaiBot Team',
-    icon: 'i-heroicons-globe-alt',
-    tags: ['即时通讯', '社区'],
-    installed: true,
-    enabled: false
-  }
-])
-
-// 安装适配器
-async function installAdapter(adapter: Adapter) {
-  try {
-    // TODO: 调用后端API安装适配器
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    adapter.installed = true
-    adapter.enabled = true
-  } catch (error) {
-    console.error('安装适配器失败:', error)
-  }
-}
-
-// 卸载适配器
-async function uninstallAdapter(adapter: Adapter) {
-  try {
-    // TODO: 调用后端API卸载适配器
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    adapter.installed = false
-    adapter.enabled = false
-  } catch (error) {
-    console.error('卸载适配器失败:', error)
-  }
-}
-
-// 切换适配器状态
-async function toggleAdapter(adapter: Adapter) {
-  try {
-    // TODO: 调用后端API切换适配器状态
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    // 状态已通过v-model更新
-  } catch (error) {
-    console.error('切换适配器状态失败:', error)
-    // 恢复原始状态
-    adapter.enabled = !adapter.enabled
-  }
-}
-</script>

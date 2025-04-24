@@ -1,14 +1,14 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
 import Header from '~/components/header/index.vue'
 import LeftMenu from '~/components/leftMenu/index.vue'
-</script> -->
+</script>
 
 <template>
   <UApp>
     <div class="flex flex-col h-screen">
-      <hader />
+      <Header />
       <div class="flex flex-1">
-        <leftMenu />
+        <LeftMenu />
         <div class="flex-1 overflow-auto">
           <NuxtPage />
         </div>

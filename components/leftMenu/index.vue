@@ -1,6 +1,5 @@
-<script setup lang="ts">
-// import { ref } from 'vue'
 import type { NavigationMenuItem } from '@nuxt/ui'
+import { ref } from 'vue'
 
 const menuItems = ref<NavigationMenuItem[]>([
   { label: '主界面', icon: 'i-ph-house', to: '/' },
