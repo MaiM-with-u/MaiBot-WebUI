@@ -7,11 +7,18 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@element-plus/nuxt',
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
+    '@nuxt/ui',
   ],
+  css: ['~/assets/css/main.css'],
   eslint: {
     config: {
       standalone: false,
     },
   },
+  ui: {
+    colors: {
+      primary: 'blue'
+    }
+  }
 })
