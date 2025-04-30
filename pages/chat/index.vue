@@ -2,25 +2,38 @@
 import { nextTick, ref } from 'vue'
 
 interface Message {
+  id: number
   type: 'user' | 'bot'
   content: string
+  time: Date
 }
 
 const messages = ref<Message[]>([
   {
+    id: 0,
     type: 'bot',
     content: '你好！我是麦麦，很高兴见到你！有什么我可以帮你的吗？',
+    time: new Date(),
   },
 ])
+
+const newMessage = ref('')
+
+function scrollToBottom() {
+  const chatArea = document.querySelector('.chat-area')
+  if (chatArea) {
+    chatArea.scrollTop = chatArea.scrollHeight
+  }
+}
 
 async function sendMessage() {
   const text = newMessage.value.trim()
   if (text) {
     messages.value.push({
-      id: String(Date.now()),
-      sender: 'user',
-      text,
-      timestamp: new Date(),
+      id: messages.value.length,
+      type: 'user',
+      content: text,
+      time: new Date(),
     })
     newMessage.value = ''
 
@@ -29,14 +42,26 @@ async function sendMessage() {
     scrollToBottom()
     setTimeout(() => {
       messages.value.push({
-        id: String(Date.now() + 1),
-        sender: 'bot',
-        text: `收到消息："${text}" (模拟回复)`,
-        timestamp: new Date(),
+        id: messages.value.length,
+        type: 'bot',
+        content: `收到消息："${text}" (模拟回复)`,
+        time: new Date(),
       })
       nextTick(scrollToBottom)
     }, 1000)
   }
+}
+
+function formatTimestamp(timestamp: Date) {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }
+  return new Intl.DateTimeFormat('zh-CN', options).format(timestamp)
 }
 </script>
 
@@ -52,22 +77,22 @@ async function sendMessage() {
         <div
           class="flex"
           :class="{
-            'justify-end': message.sender === 'user',
-            'justify-start': message.sender === 'bot',
+            'justify-end': message.type === 'user',
+            'justify-start': message.type === 'bot',
           }"
         >
           <div
             class="max-w-[70%] p-3 rounded-lg"
             :class="{
-              'bg-primary-500 text-white': message.sender === 'user',
-              'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white': message.sender === 'bot',
+              'bg-primary-500 text-white': message.type === 'user',
+              'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white': message.type === 'bot',
             }"
           >
             <p class="text-sm">
-              {{ message.text }}
+              {{ message.content }}
             </p>
-            <span class="text-xs mt-1 block text-right" :class="message.sender === 'user' ? 'text-primary-100' : 'text-gray-500 dark:text-gray-400'">
-              {{ formatTimestamp(message.timestamp) }}
+            <span class="text-xs mt-1 block text-right" :class="message.type === 'user' ? 'text-primary-100' : 'text-gray-500 dark:text-gray-400'">
+              {{ formatTimestamp(message.time) }}
             </span>
           </div>
         </div>

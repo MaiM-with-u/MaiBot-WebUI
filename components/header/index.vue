@@ -22,16 +22,14 @@ function toggleColorMode() {
       <div class="flex items-center space-x-4">
         <UButton
           icon="i-ph-moon"
-          :ui="{ rounded: 'rounded-full' }"
           variant="ghost"
-          class="dark:hidden"
+          class="dark:hidden rounded-full"
           @click="toggleColorMode"
         />
         <UButton
           icon="i-ph-sun"
-          :ui="{ rounded: 'rounded-full' }"
           variant="ghost"
-          class="hidden dark:block"
+          class="hidden dark:block rounded-full"
           @click="toggleColorMode"
         />
         <UAvatar

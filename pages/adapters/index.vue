@@ -65,7 +65,7 @@ function uninstallAdapter(adapter: Adapter) {
               </h3>
             </div>
             <UBadge
-              :color="adapter.installed ? 'green' : 'gray'"
+              :color="adapter.installed ? 'success' : 'error'"
               variant="subtle"
             >
               {{ adapter.installed ? '已安装' : '未安装' }}
@@ -109,7 +109,7 @@ function uninstallAdapter(adapter: Adapter) {
               </span>
             </div>
             <UButton
-              :color="adapter.installed ? 'red' : 'primary'"
+              :color="adapter.installed ? 'warning' : 'primary'"
               :icon="adapter.installed ? 'i-heroicons-trash' : 'i-heroicons-plus'"
               variant="soft"
               @click="adapter.installed ? uninstallAdapter(adapter) : installAdapter(adapter)"

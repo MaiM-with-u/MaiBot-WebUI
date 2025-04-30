@@ -1,7 +1,7 @@
-import type { NavigationMenuItem } from '@nuxt/ui'
+<script setup lang="ts">
 import { ref } from 'vue'
 
-const menuItems = ref<NavigationMenuItem[]>([
+const menuItems = ref([
   { label: '主界面', icon: 'i-ph-house', to: '/' },
   { label: '配置管理', icon: 'i-ph-gear', to: '/config' },
   { label: '资源管理', icon: 'i-ph-folder', to: '/resources' },

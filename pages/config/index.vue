@@ -82,7 +82,7 @@ onMounted(async () => {
         <template #footer>
           <div v-if="isEditingBotConfig" class="flex justify-end space-x-2">
             <UButton
-              color="gray"
+              color="neutral"
               variant="soft"
               @click="cancelEditBotConfig"
             >
@@ -129,7 +129,7 @@ onMounted(async () => {
         <template #footer>
           <div v-if="isEditingEnvConfig" class="flex justify-end space-x-2">
             <UButton
-              color="gray"
+              color="neutral"
               variant="soft"
               @click="cancelEditEnvConfig"
             >

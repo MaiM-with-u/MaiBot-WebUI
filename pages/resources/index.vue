@@ -77,13 +77,13 @@ const relationData = [
             >
             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-2">
               <UButton
-                color="white"
+                color="neutral"
                 variant="ghost"
                 icon="i-heroicons-eye"
                 size="sm"
               />
               <UButton
-                color="white"
+                color="neutral"
                 variant="ghost"
                 icon="i-heroicons-trash"
                 size="sm"
