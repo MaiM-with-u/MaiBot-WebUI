@@ -7,9 +7,9 @@ import LeftMenu from '~/components/leftMenu/index.vue'
   <UApp>
     <div class="flex flex-col h-screen">
       <Header />
-      <div class="flex flex-1">
-        <LeftMenu />
-        <div class="flex-1 overflow-auto">
+      <div class="flex flex-1 overflow-hidden">
+        <LeftMenu class="h-full overflow-y-auto" />
+        <div class="flex-1 h-full overflow-auto">
           <NuxtPage />
         </div>
       </div>

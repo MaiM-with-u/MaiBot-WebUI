@@ -7,40 +7,36 @@ function toggleColorMode() {
 </script>
 
 <template>
-  <UHeader
-    class="h-16 px-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+  <div
+    class="h-16 px-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 u-header"
   >
-    <template #left>
-      <div class="flex items-center space-x-3">
-        <NuxtLink to="/" class="flex items-center space-x-3">
-          <span class="text-2xl font-bold text-gray-900 dark:text-white font-sans">MaiBot</span>
-        </NuxtLink>
-      </div>
-    </template>
+    <div class="flex items-center space-x-3">
+      <NuxtLink to="/" class="flex items-center space-x-3">
+        <span class="text-2xl font-bold text-gray-900 dark:text-white font-sans">MaiBot</span>
+      </NuxtLink>
+    </div>
 
-    <template #right>
-      <div class="flex items-center space-x-4">
-        <UButton
-          icon="i-ph-moon"
-          variant="ghost"
-          class="dark:hidden rounded-full"
-          @click="toggleColorMode"
-        />
-        <UButton
-          icon="i-ph-sun"
-          variant="ghost"
-          class="hidden dark:block rounded-full"
-          @click="toggleColorMode"
-        />
-        <UAvatar
-          src="https://avatars.githubusercontent.com/u/739984?v=4"
-          alt="User Avatar"
-          size="sm"
-          class="cursor-pointer transition-all duration-200 ease-in-out"
-        />
-      </div>
-    </template>
-  </UHeader>
+    <div class="flex items-center space-x-4">
+      <UButton
+        icon="i-ph-moon"
+        variant="ghost"
+        class="dark:hidden rounded-full"
+        @click="toggleColorMode"
+      />
+      <UButton
+        icon="i-ph-sun"
+        variant="ghost"
+        class="hidden dark:block rounded-full"
+        @click="toggleColorMode"
+      />
+      <UAvatar
+        src="https://avatars.githubusercontent.com/u/739984?v=4"
+        alt="User Avatar"
+        size="sm"
+        class="cursor-pointer transition-all duration-200 ease-in-out"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped>
